@@ -1,0 +1,744 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D0BF971CF2A516A3B0C6D72 /* PairingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C0C936D1E9C4C4D58CF34 /* PairingService.swift */; };
+		0F9441BF1C0F776FCE57EDEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C36CC9895DE327ECEFF1A9A /* Assets.xcassets */; };
+		12AA1FE4751EF6603C9D8E25 /* MessageCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A54E5213F560F1D802C42F /* MessageCodec.swift */; };
+		1A89CE80E162845DF1C5AD05 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5E52D574D2D9BCECDDA69 /* SettingsView.swift */; };
+		1C1728F6AC725FF6E173D429 /* IdleSleepGuardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F52D1ACC9D31A94BF0FEAB /* IdleSleepGuardService.swift */; };
+		25EBF1B09AEF699D31D60573 /* LogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9CF8D4E2838E4E3CD83E0C /* LogsView.swift */; };
+		2875C7A402CF4ADF6A0FCBB5 /* InputInjectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D794966A18BFB9D7DD767 /* InputInjectionService.swift */; };
+		2B6E593F3B8265F728EEE118 /* SSDPDiscoverer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F0D13D29DCA2ADDAFB9ED /* SSDPDiscoverer.swift */; };
+		2D11759C4A7CA73EA2F8076C /* ReleaseNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2BB18F8649DACB01FE35E /* ReleaseNote.swift */; };
+		32B86EED9CC9B6E120DF7DBE /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ECA42F3AB85F65E910E848 /* SoundService.swift */; };
+		332282A7DAAC838FBDCA3904 /* LANScannerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4658C1CE1642B1DCF2DAEFC2 /* LANScannerService.swift */; };
+		35C4D243AF94DA857714DD60 /* MainWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CD911EE5A388177ECA35E6 /* MainWindowView.swift */; };
+		3933EB892A94B1D8F269694F /* StatusPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF1445BEA6BA50C8436F78 /* StatusPill.swift */; };
+		3B3F74947FAD58ED3775807D /* AppLogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA2D434520714909263FD8 /* AppLogService.swift */; };
+		439EA58E21EB007CB1E59995 /* PermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F52911DCBED43C2EDCC099 /* PermissionService.swift */; };
+		48100AF603964071BF11A61C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBDF574CDC388F8A18F4BA50 /* Localizable.strings */; };
+		4F2DFE1A6A2004E8A55D0F66 /* NetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831F5F8CCF2FE709DD6EF73C /* NetworkView.swift */; };
+		5035FD25736A564749F4DBC3 /* NetworkQualityMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E9916AC7CB038E201B7EB0 /* NetworkQualityMonitor.swift */; };
+		5329B48E88681880F19C838B /* PrintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D529BC024A336B7CB38F387 /* PrintView.swift */; };
+		5464DCE13C10F595C5D2219C /* EntangloMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25201A67E6F51C6EF1EA22C8 /* EntangloMessage.swift */; };
+		5561833CEFD26DCBC209CF77 /* EdgeSwitchingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E318DFF3EE92A945A62E6AA /* EdgeSwitchingTests.swift */; };
+		5CC3AA6289A634877DEBD95D /* LocalInputWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259E7B69A784C7DE697B9D8 /* LocalInputWatcher.swift */; };
+		5D00F2F84BA9DE6C62940F3C /* URLGrabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FF626DCB329736DA1CFC79 /* URLGrabber.swift */; };
+		6B7DD71DD16D1DA06CF97CE6 /* PermissionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B3CAC528330D8651FC22BC /* PermissionRow.swift */; };
+		6D0B1CFE8508319377BDE8AB /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999095DD03E54A4B49916950 /* Device.swift */; };
+		6E50B1431D86EC41FB48602F /* HeartbeatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD917299E253BCB4CFB60E /* HeartbeatMessage.swift */; };
+		706325C824C0D4B95583C68C /* DiscoveryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FFBFF87FC26953EF62D317 /* DiscoveryService.swift */; };
+		7A5EF9475DF6E60A2B3C9865 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6224263A5F4EAFEC190A2F /* SettingsStore.swift */; };
+		7BA7ECF8563CCFBDDAB156FB /* GlobalHotkeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B02DE0B2AA0A12BFD51F4DF /* GlobalHotkeyManager.swift */; };
+		7D1E8ED0A4E46076E32256FD /* CompactCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7ADC47DA93269FCC56DF0 /* CompactCard.swift */; };
+		7FCFA370443C91703D7DC988 /* ShortcutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCA116135E3D0BC55C4EFC /* ShortcutRow.swift */; };
+		8472211B6CD3CB315DD5401E /* Coordinator+QuickActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC670B4E4EAED14C31CD100 /* Coordinator+QuickActions.swift */; };
+		897026EAC52DE38BB0530E79 /* MenuBarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC8C36A7F4FAE66393E345F /* MenuBarContent.swift */; };
+		8B7E9F9DC383CC185C578D1E /* EntangloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1B6A99B0C912CE07AF298 /* EntangloApp.swift */; };
+		8D1B057F8C2B1BD6C12F2DAC /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0B9F46446E8732E0918FEA /* SidebarView.swift */; };
+		8DC43F127927D89856BB8080 /* InputSharingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57237E7E311B69A8ADF704BA /* InputSharingView.swift */; };
+		8F3CAFF9D6086114C1AC17FA /* ClipboardSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C1475434C8F5A5D61557B9 /* ClipboardSyncService.swift */; };
+		90376B5E7CA70B23470BB8D0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F1AEE86EFB9E23891309DA /* AppState.swift */; };
+		93422627738E57CACAAC8135 /* MessageCodecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F97E8CDD11C12B126FBCF2 /* MessageCodecTests.swift */; };
+		961229999DA17B9A2430AD3D /* PairingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F21DB425C30CDAD9496750B /* PairingState.swift */; };
+		9A0A39155570F2E52BB6B97E /* DeviceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905FBDE175915DF2F6051070 /* DeviceRow.swift */; };
+		9DCDBAA38E124B2C9D7F5C25 /* MetricRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C762A21785039F11623C1F /* MetricRow.swift */; };
+		A2F74B286EB30386E6924003 /* release-notes.json in Resources */ = {isa = PBXBuildFile; fileRef = C3F533548A3C3EA7AC1E26BD /* release-notes.json */; };
+		AA742FEEF25551F9BAD46528 /* NetworkInterfaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A113375069CEE7942AF1D3 /* NetworkInterfaceInfo.swift */; };
+		ADBF1E230EFBED5DD2DA2316 /* ConnectionMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE50C6A41E9FE2EB65D2D28 /* ConnectionMode.swift */; };
+		AF22BBDCD4F4DF9530EFEB7E /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01DC6ED05A9E256C8CB869A /* UpdateService.swift */; };
+		B36307746FFD98F1B54E35E0 /* FileTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30297C8DFEBC235B769F512D /* FileTransferService.swift */; };
+		C091D1FE70EF1AF7A65D6E01 /* ConnectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B59EDD0F408087BE7CA7D9 /* ConnectionCoordinator.swift */; };
+		C3013626E4A4811C0CF745B1 /* NetworkQualityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C937D71128BB6E477C356A7 /* NetworkQualityTests.swift */; };
+		C76118AA152A55778B0647DC /* PairingServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1985891D10165FDB0E28E /* PairingServiceTests.swift */; };
+		C7DC2C0DEF1AC11472C42353 /* UpdatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C19FD50493BAE5CF33FD244 /* UpdatesView.swift */; };
+		CE0E5210CFD06B040F88B819 /* EntangloRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535037D1E433AD06AE8E8E90 /* EntangloRole.swift */; };
+		D3D911D8198F8343B4E197E2 /* NetworkQualityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D51E3F266FDCEE57E32BA4 /* NetworkQualityService.swift */; };
+		D407A3C0F2C2ADB7AD78ADBA /* PortProbeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88616A3859C8DE5E060665F /* PortProbeService.swift */; };
+		D4332B7E2085EA85151EFB5C /* ScreenshotPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DD97F81C0D932E163C402 /* ScreenshotPreviewView.swift */; };
+		DE55015CBC22F54B8F43918E /* PrinterBridgeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669291D22C52D7C542DF6937 /* PrinterBridgeService.swift */; };
+		E1CAC81563D4A79FCC374CA3 /* ScreenshotCapturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322E9AED8069D7C3F19D3B6 /* ScreenshotCapturer.swift */; };
+		E728D7B5AE7D4B4931F756C7 /* DevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB148C1835A5E42A03B0C582 /* DevicesView.swift */; };
+		EB09009D0B6B00A49CA49478 /* FilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98462CCD21FC1A970A153F2 /* FilesView.swift */; };
+		EEF002824346FA3571E5FDED /* release-notes.json.tmp in Resources */ = {isa = PBXBuildFile; fileRef = 69A6C4FB035E8BD53BA5FFD1 /* release-notes.json.tmp */; };
+		F089EDBE95139A71ACFB3889 /* OUIVendorLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D885CC806DCAFB7C27CC5423 /* OUIVendorLookup.swift */; };
+		F0FDDF9B5D8605281D9AA089 /* NetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C12049C72FCF0D0F73A8D13 /* NetworkTransport.swift */; };
+		F3B359287FF1C3F54650F27B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B7330C4722A518CEBFF09 /* DashboardView.swift */; };
+		F6B4144627B7236327FD7020 /* DisplayFrameMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F78B235B1EA77FFD96EE7F0 /* DisplayFrameMessage.swift */; };
+		F6BC1C4C98CCCCBAB5756DC8 /* InputEventMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0300011B319892AE6FA57F6 /* InputEventMessage.swift */; };
+		FD6031E8BB9F1889139F1565 /* InputCaptureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102DB1268845BB56F3C0E321 /* InputCaptureService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36341B15E3D85D835E3AE12A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2ABC03014FC6CE65063B8FD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF2AEC71D3E5CB3D1E05D8E9;
+			remoteInfo = Entanglo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03B59EDD0F408087BE7CA7D9 /* ConnectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionCoordinator.swift; sourceTree = "<group>"; };
+		05DA2EC54A04D402B9B768E9 /* EntangloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EntangloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		102DB1268845BB56F3C0E321 /* InputCaptureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCaptureService.swift; sourceTree = "<group>"; };
+		13F52911DCBED43C2EDCC099 /* PermissionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionService.swift; sourceTree = "<group>"; };
+		1A9D794966A18BFB9D7DD767 /* InputInjectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputInjectionService.swift; sourceTree = "<group>"; };
+		1E318DFF3EE92A945A62E6AA /* EdgeSwitchingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeSwitchingTests.swift; sourceTree = "<group>"; };
+		1FC670B4E4EAED14C31CD100 /* Coordinator+QuickActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+QuickActions.swift"; sourceTree = "<group>"; };
+		2322E9AED8069D7C3F19D3B6 /* ScreenshotCapturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotCapturer.swift; sourceTree = "<group>"; };
+		25201A67E6F51C6EF1EA22C8 /* EntangloMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntangloMessage.swift; sourceTree = "<group>"; };
+		2C36CC9895DE327ECEFF1A9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C6224263A5F4EAFEC190A2F /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		2D529BC024A336B7CB38F387 /* PrintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintView.swift; sourceTree = "<group>"; };
+		2F78B235B1EA77FFD96EE7F0 /* DisplayFrameMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayFrameMessage.swift; sourceTree = "<group>"; };
+		30297C8DFEBC235B769F512D /* FileTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTransferService.swift; sourceTree = "<group>"; };
+		3597A6635ECD1577BFC7407E /* Entanglo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Entanglo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AC2BB18F8649DACB01FE35E /* ReleaseNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseNote.swift; sourceTree = "<group>"; };
+		4658C1CE1642B1DCF2DAEFC2 /* LANScannerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LANScannerService.swift; sourceTree = "<group>"; };
+		5259E7B69A784C7DE697B9D8 /* LocalInputWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalInputWatcher.swift; sourceTree = "<group>"; };
+		535037D1E433AD06AE8E8E90 /* EntangloRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntangloRole.swift; sourceTree = "<group>"; };
+		56D1B6A99B0C912CE07AF298 /* EntangloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntangloApp.swift; sourceTree = "<group>"; };
+		57237E7E311B69A8ADF704BA /* InputSharingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSharingView.swift; sourceTree = "<group>"; };
+		5AEA2D434520714909263FD8 /* AppLogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogService.swift; sourceTree = "<group>"; };
+		5BC5E52D574D2D9BCECDDA69 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		63F97E8CDD11C12B126FBCF2 /* MessageCodecTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCodecTests.swift; sourceTree = "<group>"; };
+		669291D22C52D7C542DF6937 /* PrinterBridgeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterBridgeService.swift; sourceTree = "<group>"; };
+		69A6C4FB035E8BD53BA5FFD1 /* release-notes.json.tmp */ = {isa = PBXFileReference; path = "release-notes.json.tmp"; sourceTree = "<group>"; };
+		70A54E5213F560F1D802C42F /* MessageCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCodec.swift; sourceTree = "<group>"; };
+		70C1475434C8F5A5D61557B9 /* ClipboardSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardSyncService.swift; sourceTree = "<group>"; };
+		7C19FD50493BAE5CF33FD244 /* UpdatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesView.swift; sourceTree = "<group>"; };
+		831F5F8CCF2FE709DD6EF73C /* NetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkView.swift; sourceTree = "<group>"; };
+		84D51E3F266FDCEE57E32BA4 /* NetworkQualityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkQualityService.swift; sourceTree = "<group>"; };
+		8B02DE0B2AA0A12BFD51F4DF /* GlobalHotkeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHotkeyManager.swift; sourceTree = "<group>"; };
+		8C12049C72FCF0D0F73A8D13 /* NetworkTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTransport.swift; sourceTree = "<group>"; };
+		8C67CA7A467140824AD57C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8C937D71128BB6E477C356A7 /* NetworkQualityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkQualityTests.swift; sourceTree = "<group>"; };
+		905FBDE175915DF2F6051070 /* DeviceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRow.swift; sourceTree = "<group>"; };
+		93FFBFF87FC26953EF62D317 /* DiscoveryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryService.swift; sourceTree = "<group>"; };
+		95F1AEE86EFB9E23891309DA /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		999095DD03E54A4B49916950 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		9DE50C6A41E9FE2EB65D2D28 /* ConnectionMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionMode.swift; sourceTree = "<group>"; };
+		9F21DB425C30CDAD9496750B /* PairingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingState.swift; sourceTree = "<group>"; };
+		A0300011B319892AE6FA57F6 /* InputEventMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputEventMessage.swift; sourceTree = "<group>"; };
+		A9CD911EE5A388177ECA35E6 /* MainWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowView.swift; sourceTree = "<group>"; };
+		AD0B9F46446E8732E0918FEA /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		AEC8C36A7F4FAE66393E345F /* MenuBarContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarContent.swift; sourceTree = "<group>"; };
+		B01DC6ED05A9E256C8CB869A /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
+		B7AD917299E253BCB4CFB60E /* HeartbeatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartbeatMessage.swift; sourceTree = "<group>"; };
+		B88616A3859C8DE5E060665F /* PortProbeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortProbeService.swift; sourceTree = "<group>"; };
+		B95DD97F81C0D932E163C402 /* ScreenshotPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotPreviewView.swift; sourceTree = "<group>"; };
+		BF2F0D13D29DCA2ADDAFB9ED /* SSDPDiscoverer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSDPDiscoverer.swift; sourceTree = "<group>"; };
+		C0A113375069CEE7942AF1D3 /* NetworkInterfaceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterfaceInfo.swift; sourceTree = "<group>"; };
+		C1E9916AC7CB038E201B7EB0 /* NetworkQualityMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkQualityMonitor.swift; sourceTree = "<group>"; };
+		C2ECA42F3AB85F65E910E848 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
+		C3F533548A3C3EA7AC1E26BD /* release-notes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "release-notes.json"; sourceTree = "<group>"; };
+		C7B3CAC528330D8651FC22BC /* PermissionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionRow.swift; sourceTree = "<group>"; };
+		CA1C0C936D1E9C4C4D58CF34 /* PairingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingService.swift; sourceTree = "<group>"; };
+		CB148C1835A5E42A03B0C582 /* DevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesView.swift; sourceTree = "<group>"; };
+		CECF1445BEA6BA50C8436F78 /* StatusPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPill.swift; sourceTree = "<group>"; };
+		CFDCA116135E3D0BC55C4EFC /* ShortcutRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutRow.swift; sourceTree = "<group>"; };
+		D3F52D1ACC9D31A94BF0FEAB /* IdleSleepGuardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleSleepGuardService.swift; sourceTree = "<group>"; };
+		D43B7330C4722A518CEBFF09 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		D6C762A21785039F11623C1F /* MetricRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricRow.swift; sourceTree = "<group>"; };
+		D885CC806DCAFB7C27CC5423 /* OUIVendorLookup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OUIVendorLookup.swift; sourceTree = "<group>"; };
+		DBDF574CDC388F8A18F4BA50 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		DE9CF8D4E2838E4E3CD83E0C /* LogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsView.swift; sourceTree = "<group>"; };
+		E0FF626DCB329736DA1CFC79 /* URLGrabber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLGrabber.swift; sourceTree = "<group>"; };
+		E78354405B0206070B8CAE86 /* Entanglo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Entanglo-Bridging-Header.h"; sourceTree = "<group>"; };
+		E98462CCD21FC1A970A153F2 /* FilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesView.swift; sourceTree = "<group>"; };
+		EBE7ADC47DA93269FCC56DF0 /* CompactCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactCard.swift; sourceTree = "<group>"; };
+		F0B1985891D10165FDB0E28E /* PairingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingServiceTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		00BDD5981AC383B8C002DA60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9DE50C6A41E9FE2EB65D2D28 /* ConnectionMode.swift */,
+				999095DD03E54A4B49916950 /* Device.swift */,
+				535037D1E433AD06AE8E8E90 /* EntangloRole.swift */,
+				C0A113375069CEE7942AF1D3 /* NetworkInterfaceInfo.swift */,
+				9F21DB425C30CDAD9496750B /* PairingState.swift */,
+				3AC2BB18F8649DACB01FE35E /* ReleaseNote.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		491D062D500CC1C701B7C075 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D43B7330C4722A518CEBFF09 /* DashboardView.swift */,
+				CB148C1835A5E42A03B0C582 /* DevicesView.swift */,
+				E98462CCD21FC1A970A153F2 /* FilesView.swift */,
+				57237E7E311B69A8ADF704BA /* InputSharingView.swift */,
+				DE9CF8D4E2838E4E3CD83E0C /* LogsView.swift */,
+				A9CD911EE5A388177ECA35E6 /* MainWindowView.swift */,
+				AEC8C36A7F4FAE66393E345F /* MenuBarContent.swift */,
+				831F5F8CCF2FE709DD6EF73C /* NetworkView.swift */,
+				2D529BC024A336B7CB38F387 /* PrintView.swift */,
+				B95DD97F81C0D932E163C402 /* ScreenshotPreviewView.swift */,
+				5BC5E52D574D2D9BCECDDA69 /* SettingsView.swift */,
+				AD0B9F46446E8732E0918FEA /* SidebarView.swift */,
+				7C19FD50493BAE5CF33FD244 /* UpdatesView.swift */,
+				CA5EEAAE6774E722D8A42C95 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		83A8AF484ED33A4A4F623115 /* Entanglo */ = {
+			isa = PBXGroup;
+			children = (
+				95F1AEE86EFB9E23891309DA /* AppState.swift */,
+				56D1B6A99B0C912CE07AF298 /* EntangloApp.swift */,
+				8C67CA7A467140824AD57C7D /* Info.plist */,
+				8BE475F3B2F933FAF5A2DB77 /* Bridging */,
+				00BDD5981AC383B8C002DA60 /* Models */,
+				D207E9CE947F20100773B98E /* Protocol */,
+				E23906698E7CCC4E4E6FEE2D /* Resources */,
+				D517CEE4C376E5B9A7AD1FEF /* Services */,
+				491D062D500CC1C701B7C075 /* Views */,
+			);
+			path = Entanglo;
+			sourceTree = "<group>";
+		};
+		8BE475F3B2F933FAF5A2DB77 /* Bridging */ = {
+			isa = PBXGroup;
+			children = (
+				E78354405B0206070B8CAE86 /* Entanglo-Bridging-Header.h */,
+			);
+			path = Bridging;
+			sourceTree = "<group>";
+		};
+		9FA8E542B679183FF17FF6CC = {
+			isa = PBXGroup;
+			children = (
+				83A8AF484ED33A4A4F623115 /* Entanglo */,
+				AA50AB1AE1CA6F648E5CFB44 /* Tests */,
+				C4599909922EEBF373CF426E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA50AB1AE1CA6F648E5CFB44 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DDB73C1840C9BFB6A8B52C82 /* EntangloTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		C4599909922EEBF373CF426E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3597A6635ECD1577BFC7407E /* Entanglo.app */,
+				05DA2EC54A04D402B9B768E9 /* EntangloTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA5EEAAE6774E722D8A42C95 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EBE7ADC47DA93269FCC56DF0 /* CompactCard.swift */,
+				905FBDE175915DF2F6051070 /* DeviceRow.swift */,
+				D6C762A21785039F11623C1F /* MetricRow.swift */,
+				C7B3CAC528330D8651FC22BC /* PermissionRow.swift */,
+				CFDCA116135E3D0BC55C4EFC /* ShortcutRow.swift */,
+				CECF1445BEA6BA50C8436F78 /* StatusPill.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D207E9CE947F20100773B98E /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				2F78B235B1EA77FFD96EE7F0 /* DisplayFrameMessage.swift */,
+				25201A67E6F51C6EF1EA22C8 /* EntangloMessage.swift */,
+				B7AD917299E253BCB4CFB60E /* HeartbeatMessage.swift */,
+				A0300011B319892AE6FA57F6 /* InputEventMessage.swift */,
+				70A54E5213F560F1D802C42F /* MessageCodec.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		D517CEE4C376E5B9A7AD1FEF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5AEA2D434520714909263FD8 /* AppLogService.swift */,
+				70C1475434C8F5A5D61557B9 /* ClipboardSyncService.swift */,
+				03B59EDD0F408087BE7CA7D9 /* ConnectionCoordinator.swift */,
+				1FC670B4E4EAED14C31CD100 /* Coordinator+QuickActions.swift */,
+				93FFBFF87FC26953EF62D317 /* DiscoveryService.swift */,
+				30297C8DFEBC235B769F512D /* FileTransferService.swift */,
+				8B02DE0B2AA0A12BFD51F4DF /* GlobalHotkeyManager.swift */,
+				D3F52D1ACC9D31A94BF0FEAB /* IdleSleepGuardService.swift */,
+				102DB1268845BB56F3C0E321 /* InputCaptureService.swift */,
+				1A9D794966A18BFB9D7DD767 /* InputInjectionService.swift */,
+				4658C1CE1642B1DCF2DAEFC2 /* LANScannerService.swift */,
+				5259E7B69A784C7DE697B9D8 /* LocalInputWatcher.swift */,
+				C1E9916AC7CB038E201B7EB0 /* NetworkQualityMonitor.swift */,
+				84D51E3F266FDCEE57E32BA4 /* NetworkQualityService.swift */,
+				8C12049C72FCF0D0F73A8D13 /* NetworkTransport.swift */,
+				D885CC806DCAFB7C27CC5423 /* OUIVendorLookup.swift */,
+				CA1C0C936D1E9C4C4D58CF34 /* PairingService.swift */,
+				13F52911DCBED43C2EDCC099 /* PermissionService.swift */,
+				B88616A3859C8DE5E060665F /* PortProbeService.swift */,
+				669291D22C52D7C542DF6937 /* PrinterBridgeService.swift */,
+				2322E9AED8069D7C3F19D3B6 /* ScreenshotCapturer.swift */,
+				2C6224263A5F4EAFEC190A2F /* SettingsStore.swift */,
+				C2ECA42F3AB85F65E910E848 /* SoundService.swift */,
+				BF2F0D13D29DCA2ADDAFB9ED /* SSDPDiscoverer.swift */,
+				B01DC6ED05A9E256C8CB869A /* UpdateService.swift */,
+				E0FF626DCB329736DA1CFC79 /* URLGrabber.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DDB73C1840C9BFB6A8B52C82 /* EntangloTests */ = {
+			isa = PBXGroup;
+			children = (
+				1E318DFF3EE92A945A62E6AA /* EdgeSwitchingTests.swift */,
+				63F97E8CDD11C12B126FBCF2 /* MessageCodecTests.swift */,
+				8C937D71128BB6E477C356A7 /* NetworkQualityTests.swift */,
+				F0B1985891D10165FDB0E28E /* PairingServiceTests.swift */,
+			);
+			path = EntangloTests;
+			sourceTree = "<group>";
+		};
+		E23906698E7CCC4E4E6FEE2D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C36CC9895DE327ECEFF1A9A /* Assets.xcassets */,
+				DBDF574CDC388F8A18F4BA50 /* Localizable.strings */,
+				C3F533548A3C3EA7AC1E26BD /* release-notes.json */,
+				69A6C4FB035E8BD53BA5FFD1 /* release-notes.json.tmp */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		045DABE221B710542DCB3663 /* EntangloTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 828FB56EEB95A28E91ECB370 /* Build configuration list for PBXNativeTarget "EntangloTests" */;
+			buildPhases = (
+				FD59BC198C68B52035ABFEA4 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AD32DF2E7B6175142877836 /* PBXTargetDependency */,
+			);
+			name = EntangloTests;
+			packageProductDependencies = (
+			);
+			productName = EntangloTests;
+			productReference = 05DA2EC54A04D402B9B768E9 /* EntangloTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF2AEC71D3E5CB3D1E05D8E9 /* Entanglo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25742F06A70801FA82E2C52B /* Build configuration list for PBXNativeTarget "Entanglo" */;
+			buildPhases = (
+				90539219C13DD7D7DB09C57C /* Sources */,
+				CA36E896448AEC88193E7164 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Entanglo;
+			packageProductDependencies = (
+			);
+			productName = Entanglo;
+			productReference = 3597A6635ECD1577BFC7407E /* Entanglo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2ABC03014FC6CE65063B8FD9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					045DABE221B710542DCB3663 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					CF2AEC71D3E5CB3D1E05D8E9 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 4E2098D5EAEDCFE1C0CCB39F /* Build configuration list for PBXProject "Entanglo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 9FA8E542B679183FF17FF6CC;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C4599909922EEBF373CF426E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF2AEC71D3E5CB3D1E05D8E9 /* Entanglo */,
+				045DABE221B710542DCB3663 /* EntangloTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA36E896448AEC88193E7164 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F9441BF1C0F776FCE57EDEB /* Assets.xcassets in Resources */,
+				48100AF603964071BF11A61C /* Localizable.strings in Resources */,
+				A2F74B286EB30386E6924003 /* release-notes.json in Resources */,
+				EEF002824346FA3571E5FDED /* release-notes.json.tmp in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90539219C13DD7D7DB09C57C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B3F74947FAD58ED3775807D /* AppLogService.swift in Sources */,
+				90376B5E7CA70B23470BB8D0 /* AppState.swift in Sources */,
+				8F3CAFF9D6086114C1AC17FA /* ClipboardSyncService.swift in Sources */,
+				7D1E8ED0A4E46076E32256FD /* CompactCard.swift in Sources */,
+				C091D1FE70EF1AF7A65D6E01 /* ConnectionCoordinator.swift in Sources */,
+				ADBF1E230EFBED5DD2DA2316 /* ConnectionMode.swift in Sources */,
+				8472211B6CD3CB315DD5401E /* Coordinator+QuickActions.swift in Sources */,
+				F3B359287FF1C3F54650F27B /* DashboardView.swift in Sources */,
+				6D0B1CFE8508319377BDE8AB /* Device.swift in Sources */,
+				9A0A39155570F2E52BB6B97E /* DeviceRow.swift in Sources */,
+				E728D7B5AE7D4B4931F756C7 /* DevicesView.swift in Sources */,
+				706325C824C0D4B95583C68C /* DiscoveryService.swift in Sources */,
+				F6B4144627B7236327FD7020 /* DisplayFrameMessage.swift in Sources */,
+				8B7E9F9DC383CC185C578D1E /* EntangloApp.swift in Sources */,
+				5464DCE13C10F595C5D2219C /* EntangloMessage.swift in Sources */,
+				CE0E5210CFD06B040F88B819 /* EntangloRole.swift in Sources */,
+				B36307746FFD98F1B54E35E0 /* FileTransferService.swift in Sources */,
+				EB09009D0B6B00A49CA49478 /* FilesView.swift in Sources */,
+				7BA7ECF8563CCFBDDAB156FB /* GlobalHotkeyManager.swift in Sources */,
+				6E50B1431D86EC41FB48602F /* HeartbeatMessage.swift in Sources */,
+				1C1728F6AC725FF6E173D429 /* IdleSleepGuardService.swift in Sources */,
+				FD6031E8BB9F1889139F1565 /* InputCaptureService.swift in Sources */,
+				F6BC1C4C98CCCCBAB5756DC8 /* InputEventMessage.swift in Sources */,
+				2875C7A402CF4ADF6A0FCBB5 /* InputInjectionService.swift in Sources */,
+				8DC43F127927D89856BB8080 /* InputSharingView.swift in Sources */,
+				332282A7DAAC838FBDCA3904 /* LANScannerService.swift in Sources */,
+				5CC3AA6289A634877DEBD95D /* LocalInputWatcher.swift in Sources */,
+				25EBF1B09AEF699D31D60573 /* LogsView.swift in Sources */,
+				35C4D243AF94DA857714DD60 /* MainWindowView.swift in Sources */,
+				897026EAC52DE38BB0530E79 /* MenuBarContent.swift in Sources */,
+				12AA1FE4751EF6603C9D8E25 /* MessageCodec.swift in Sources */,
+				9DCDBAA38E124B2C9D7F5C25 /* MetricRow.swift in Sources */,
+				AA742FEEF25551F9BAD46528 /* NetworkInterfaceInfo.swift in Sources */,
+				5035FD25736A564749F4DBC3 /* NetworkQualityMonitor.swift in Sources */,
+				D3D911D8198F8343B4E197E2 /* NetworkQualityService.swift in Sources */,
+				F0FDDF9B5D8605281D9AA089 /* NetworkTransport.swift in Sources */,
+				4F2DFE1A6A2004E8A55D0F66 /* NetworkView.swift in Sources */,
+				F089EDBE95139A71ACFB3889 /* OUIVendorLookup.swift in Sources */,
+				0D0BF971CF2A516A3B0C6D72 /* PairingService.swift in Sources */,
+				961229999DA17B9A2430AD3D /* PairingState.swift in Sources */,
+				6B7DD71DD16D1DA06CF97CE6 /* PermissionRow.swift in Sources */,
+				439EA58E21EB007CB1E59995 /* PermissionService.swift in Sources */,
+				D407A3C0F2C2ADB7AD78ADBA /* PortProbeService.swift in Sources */,
+				5329B48E88681880F19C838B /* PrintView.swift in Sources */,
+				DE55015CBC22F54B8F43918E /* PrinterBridgeService.swift in Sources */,
+				2D11759C4A7CA73EA2F8076C /* ReleaseNote.swift in Sources */,
+				2B6E593F3B8265F728EEE118 /* SSDPDiscoverer.swift in Sources */,
+				E1CAC81563D4A79FCC374CA3 /* ScreenshotCapturer.swift in Sources */,
+				D4332B7E2085EA85151EFB5C /* ScreenshotPreviewView.swift in Sources */,
+				7A5EF9475DF6E60A2B3C9865 /* SettingsStore.swift in Sources */,
+				1A89CE80E162845DF1C5AD05 /* SettingsView.swift in Sources */,
+				7FCFA370443C91703D7DC988 /* ShortcutRow.swift in Sources */,
+				8D1B057F8C2B1BD6C12F2DAC /* SidebarView.swift in Sources */,
+				32B86EED9CC9B6E120DF7DBE /* SoundService.swift in Sources */,
+				3933EB892A94B1D8F269694F /* StatusPill.swift in Sources */,
+				5D00F2F84BA9DE6C62940F3C /* URLGrabber.swift in Sources */,
+				AF22BBDCD4F4DF9530EFEB7E /* UpdateService.swift in Sources */,
+				C7DC2C0DEF1AC11472C42353 /* UpdatesView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD59BC198C68B52035ABFEA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5561833CEFD26DCBC209CF77 /* EdgeSwitchingTests.swift in Sources */,
+				93422627738E57CACAAC8135 /* MessageCodecTests.swift in Sources */,
+				C3013626E4A4811C0CF745B1 /* NetworkQualityTests.swift in Sources */,
+				C76118AA152A55778B0647DC /* PairingServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8AD32DF2E7B6175142877836 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF2AEC71D3E5CB3D1E05D8E9 /* Entanglo */;
+			targetProxy = 36341B15E3D85D835E3AE12A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0FC04AC94C11BB3E73151EEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = Entanglo.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Entanglo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paoloasara.entanglo;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Entanglo/Bridging/Entanglo-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		13ED2F5662884A6959D002F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paoloasara.entanglo.tests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Entanglo.app/Contents/MacOS/Entanglo";
+			};
+			name = Release;
+		};
+		37A703D0A4A0A892095EE787 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Entanglo Local Signing";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		BEEE5EAC03BEEAB0498FFBC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = Entanglo.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Entanglo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paoloasara.entanglo;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Entanglo/Bridging/Entanglo-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		CF4C7444AE7AC30DF1CC8CE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Entanglo Local Signing";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		E442283D40B1F6355358CFA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paoloasara.entanglo.tests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Entanglo.app/Contents/MacOS/Entanglo";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25742F06A70801FA82E2C52B /* Build configuration list for PBXNativeTarget "Entanglo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEEE5EAC03BEEAB0498FFBC8 /* Debug */,
+				0FC04AC94C11BB3E73151EEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4E2098D5EAEDCFE1C0CCB39F /* Build configuration list for PBXProject "Entanglo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF4C7444AE7AC30DF1CC8CE4 /* Debug */,
+				37A703D0A4A0A892095EE787 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		828FB56EEB95A28E91ECB370 /* Build configuration list for PBXNativeTarget "EntangloTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E442283D40B1F6355358CFA2 /* Debug */,
+				13ED2F5662884A6959D002F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2ABC03014FC6CE65063B8FD9 /* Project object */;
+}

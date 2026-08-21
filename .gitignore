@@ -1,0 +1,34 @@
+# macOS
+.DS_Store
+
+# Xcode
+xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcuserstate
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Packages/
+Package.pins
+Package.resolved
+
+# Build products
+build/
+DerivedData/
+dist/
+*.dmg
+*.app.zip
+
+# Local secrets / signing
+*.p12
+*.provisionprofile
+*.mobileprovision
+*.certSigningRequest
+Config.local.*
+
+# Ephemeral
+*.tmp
+*~

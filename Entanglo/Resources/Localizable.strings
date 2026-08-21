@@ -1,0 +1,35 @@
+/*
+   filename: Localizable.strings
+   path: Entanglo/Entanglo/Resources/Localizable.strings
+   purpose: American English strings for Entanglo's UI. v0.1 ships
+            English only.
+*/
+
+"app.name" = "Entanglo";
+"app.tagline" = "Shared keyboard, mouse, and files across your Macs on the LAN";
+
+"section.dashboard"       = "Dashboard";
+"section.devices"         = "Devices";
+"section.inputSharing"    = "Input Sharing";
+"section.settings"        = "Settings";
+"section.logs"            = "Logs";
+
+"pairing.notPaired"        = "Not Paired";
+"pairing.pairingRequested" = "Pairing Requested";
+"pairing.pinRequired"      = "PIN Required";
+"pairing.trusted"          = "Trusted";
+"pairing.blocked"          = "Blocked";
+
+"action.pair"        = "Pair";
+"action.trust"       = "Trust This Device";
+"action.removeTrust" = "Remove Trust";
+"action.block"       = "Block Device";
+
+"network.ethernetPreferred" = "Ethernet Preferred";
+"network.wifiOK"            = "Wi-Fi OK";
+"network.unstable"          = "Unstable";
+"network.offline"           = "Offline";
+
+"permissions.accessibility"   = "Accessibility";
+"permissions.inputMonitoring" = "Input Monitoring";
+"permissions.localNetwork"    = "Local Network";

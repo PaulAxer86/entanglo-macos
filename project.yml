@@ -1,0 +1,87 @@
+name: Entanglo
+options:
+  bundleIdPrefix: com.paoloasara
+  deploymentTarget:
+    macOS: "13.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "13.0"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Manual
+    CODE_SIGN_IDENTITY: "Entanglo Local Signing"
+
+targets:
+  Entanglo:
+    type: application
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: Entanglo
+        excludes:
+          - "**/.DS_Store"
+    resources:
+      - Entanglo/Resources
+    info:
+      path: Entanglo/Info.plist
+      properties:
+        CFBundleDisplayName: Entanglo
+        CFBundleShortVersionString: "0.1.58"
+        CFBundleVersion: "1"
+        LSApplicationCategoryType: public.app-category.utilities
+        LSMinimumSystemVersion: "13.0"
+        NSHumanReadableCopyright: "Copyright (c) 2026 Paolo Asara"
+        NSLocalNetworkUsageDescription: "Entanglo discovers and connects to your other Macs on the local network."
+        NSBonjourServices:
+          - "_entanglo._tcp"
+        NSAppleEventsUsageDescription: "Entanglo uses Apple Events only when you explicitly grant it Accessibility access."
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+    entitlements:
+      path: Entanglo.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.paoloasara.entanglo
+        ENABLE_HARDENED_RUNTIME: YES
+        GENERATE_INFOPLIST_FILE: NO
+        SWIFT_EMIT_LOC_STRINGS: YES
+        COMBINE_HIDPI_IMAGES: YES
+        ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: YES
+        SWIFT_OBJC_BRIDGING_HEADER: Entanglo/Bridging/Entanglo-Bridging-Header.h
+
+  EntangloTests:
+    type: bundle.unit-test
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: Tests/EntangloTests
+    dependencies:
+      - target: Entanglo
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.paoloasara.entanglo.tests
+        GENERATE_INFOPLIST_FILE: YES
+        BUNDLE_LOADER: "$(TEST_HOST)"
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Entanglo.app/Contents/MacOS/Entanglo"
+
+schemes:
+  Entanglo:
+    build:
+      targets:
+        Entanglo: all
+        EntangloTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - EntangloTests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
