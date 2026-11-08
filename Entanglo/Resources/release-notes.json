@@ -1,5 +1,13 @@
 [
   {
+    "version": "0.1.60",
+    "date": "2026-11-08",
+    "title": "Mac: advertise main-display size in Hello — lets Linux 0.1.5+ controllers seed and clamp the cursor on the Mac canvas",
+    "highlights": [
+      "Mac: `HelloPayload` now carries optional `screenWidth` and `screenHeight` integers (logical points of `NSScreen.main`), populated by `ConnectionCoordinator.sendLocalHello` at every connect. Satisfies PROTOCOL.md §5.1, which marks the fields optional and tells controllers to fall back to a legacy heuristic when absent. Concrete payoff: Linux 0.1.5 full-controller builds (the `Make Linux a full controller` release that scales edge coordinates to the receiver's canvas) will now seed the cursor at the correct position on the Mac receiver and clamp absolute moves to the real Mac display bounds instead of the controller's own screen. Windows and Android peers ignore the new fields today; nothing regresses for them."
+    ]
+  },
+  {
     "version": "0.1.59",
     "date": "2026-11-08",
     "title": "Mac: stable device identity via Bonjour TXT — fixes duplicate rows in Devices",

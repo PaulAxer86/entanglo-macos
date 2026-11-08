@@ -29,7 +29,7 @@ targets:
       path: Entanglo/Info.plist
       properties:
         CFBundleDisplayName: Entanglo
-        CFBundleShortVersionString: "0.1.59"
+        CFBundleShortVersionString: "0.1.60"
         CFBundleVersion: "1"
         LSApplicationCategoryType: public.app-category.utilities
         LSMinimumSystemVersion: "13.0"

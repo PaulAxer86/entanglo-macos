@@ -116,13 +116,30 @@ public struct HelloPayload: Codable, Equatable, Sendable {
     /// (e.g. "macOS", "Windows", "Linux"). Optional for backwards
     /// compatibility with older peers that don't send it.
     public var platform: String?
+    /// Main display's logical-pixel width, used by remote controllers
+    /// for cursor seeding and clamping (PROTOCOL.md §5.1). Optional:
+    /// absent on peers that pre-date 0.1.60; must be supplied together
+    /// with `screenHeight`.
+    public var screenWidth: Int?
+    /// Main display's logical-pixel height. See `screenWidth`.
+    public var screenHeight: Int?
 
-    public init(deviceName: String, deviceModel: String, appVersion: String, roles: [EntangloRole], platform: String? = nil) {
+    public init(
+        deviceName: String,
+        deviceModel: String,
+        appVersion: String,
+        roles: [EntangloRole],
+        platform: String? = nil,
+        screenWidth: Int? = nil,
+        screenHeight: Int? = nil
+    ) {
         self.deviceName = deviceName
         self.deviceModel = deviceModel
         self.appVersion = appVersion
         self.roles = roles
         self.platform = platform
+        self.screenWidth = screenWidth
+        self.screenHeight = screenHeight
     }
 }
 

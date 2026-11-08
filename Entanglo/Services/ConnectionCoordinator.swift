@@ -17,6 +17,9 @@ import Combine
 #if canImport(Network)
 import Network
 #endif
+#if canImport(AppKit)
+import AppKit
+#endif
 
 @MainActor
 public final class ConnectionCoordinator: ObservableObject {
@@ -254,14 +257,29 @@ public final class ConnectionCoordinator: ObservableObject {
         if controllerRoleEnabled { roles.append(.controller) }
         if receiverRoleEnabled { roles.append(.receiver) }
         if roles.isEmpty { roles = [.controller] }
+        let screen = Self.localScreenSize()
         let payload = HelloPayload(
             deviceName: localDeviceName,
             deviceModel: Self.deviceModelIdentifier(),
             appVersion: Self.appVersion(),
             roles: roles,
-            platform: "macOS"
+            platform: "macOS",
+            screenWidth: screen?.width,
+            screenHeight: screen?.height
         )
         transport.send(type: .hello, payload: payload)
+    }
+
+    private static func localScreenSize() -> (width: Int, height: Int)? {
+        #if canImport(AppKit)
+        guard let frame = NSScreen.main?.frame else { return nil }
+        let w = Int(frame.width.rounded())
+        let h = Int(frame.height.rounded())
+        guard w > 0, h > 0 else { return nil }
+        return (w, h)
+        #else
+        return nil
+        #endif
     }
 
     private static func appVersion() -> String {
