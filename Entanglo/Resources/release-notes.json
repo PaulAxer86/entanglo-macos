@@ -1,5 +1,14 @@
 [
   {
+    "version": "0.1.59",
+    "date": "2026-11-08",
+    "title": "Mac: stable device identity via Bonjour TXT — fixes duplicate rows in Devices",
+    "highlights": [
+      "Mac: `DiscoveryService` now publishes the local stable UUID (`localDeviceId`) in the Bonjour TXT record under the key `id`, and the browser keys each `Device` by the peer's advertised UUID instead of its Bonjour service name. Root cause of the long-standing 'same Mac appears twice in Devices' complaint: `Device.id` was documented as a stable UUID but the discovery path assigned it the Bonjour service name, while the Hello handshake later assigned the real UUID — same peer, two ids, no dedupe in `DevicesView.combinedDevices`. Users who had already trusted a peer on the name-keyed row kept seeing the UUID-keyed row re-trust on every handshake, producing one 'Disconnected · Trusted' ghost per renamed or Bonjour-collided peer. The TXT-first lookup keys the Device correctly from the first browse callback. Legacy peers (Mac <0.1.59, Windows 0.1.55, Android) still fall back to the Bonjour name until their first Hello.",
+      "Mac: `ConnectionCoordinator` Hello handler now performs one-shot deduplication. When a Hello arrives under the peer's real UUID, any previously persisted entry that shares the peer's display name but has a different id is forgotten (and its runtime slots in `connectionStates`, `outbound`, `wiredUpgradeAttempted` are scrubbed), after inheriting its pairing state onto the UUID entry. So an upgrade from 0.1.58 → 0.1.59 collapses the pre-existing ghost rows on the first reconnect, without any user action — including collapsing a 'Trusted' ghost onto a freshly discovered row so trust is preserved."
+    ]
+  },
+  {
     "version": "0.1.58",
     "date": "2026-08-08",
     "title": "Mac: multi-peer screenshot picker + wired-path upgrade timing fix • Windows: Quit tray fix + installer kill",

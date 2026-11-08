@@ -315,11 +315,22 @@ public final class ConnectionCoordinator: ObservableObject {
             do {
                 let payload = try MessageCodec.decodePayload(envelope, as: HelloPayload.self)
                 let id = knownDeviceId(for: transport) ?? envelope.senderDeviceId
+                // Carry an existing pairing state across the name→UUID
+                // migration. A peer first seen on an older build was
+                // persisted under its Bonjour name; once this hello arrives
+                // we promote it to the UUID key and inherit whatever
+                // pairing state the user had already granted.
+                let nameTwin = payload.deviceName.isEmpty
+                    ? nil
+                    : pairing.devices.first(where: { $0.id != id && $0.name == payload.deviceName })
+                let inheritedPairing = pairing.device(id: id)?.pairing
+                    ?? nameTwin?.pairing
+                    ?? .notPaired
                 let device = Device(
                     id: id,
                     name: payload.deviceName,
                     roles: Set(payload.roles),
-                    pairing: pairing.device(id: id)?.pairing ?? .notPaired,
+                    pairing: inheritedPairing,
                     connection: .connected,
                     iface: transport.interfaceKind == .unknown
                         ? NetworkInterfaceInfo(kind: .unknown, name: payload.platform ?? "unknown")
@@ -328,6 +339,22 @@ public final class ConnectionCoordinator: ObservableObject {
                     appVersion: payload.appVersion
                 )
                 pairing.observe(device)
+                // One-shot dedupe: forget every leftover entry that shares
+                // the peer's name but a different id, and scrub their
+                // runtime state so the Devices list collapses immediately
+                // instead of waiting for the next relaunch.
+                if !payload.deviceName.isEmpty {
+                    let staleTwins = pairing.devices.filter {
+                        $0.id != id && $0.name == payload.deviceName
+                    }
+                    for twin in staleTwins {
+                        pairing.forget(deviceId: twin.id)
+                        connectionStates.removeValue(forKey: twin.id)
+                        outbound.removeValue(forKey: twin.id)
+                        wiredUpgradeAttempted.remove(twin.id)
+                        log.log(.pairing, "Merged duplicate '\(twin.name)' id=\(twin.id) → \(id)")
+                    }
+                }
                 log.log(.network, "Hello from \(payload.deviceName) (\(payload.platform ?? "unknown")) id=\(envelope.senderDeviceId)")
             } catch {
                 log.log(.error, "Bad Hello payload: \(error)")

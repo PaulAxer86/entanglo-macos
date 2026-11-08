@@ -584,7 +584,11 @@ final class AppState: ObservableObject {
     }
 
     func startDiscovery() {
-        discovery.startAdvertising(name: localDeviceName, port: Self.defaultListenPort)
+        discovery.startAdvertising(
+            name: localDeviceName,
+            deviceId: localDeviceId,
+            port: Self.defaultListenPort
+        )
         discovery.startBrowsing()
     }
 

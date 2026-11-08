@@ -53,7 +53,7 @@ public final class DiscoveryService: ObservableObject {
     }
     #endif
 
-    public func startAdvertising(name: String, port: UInt16) {
+    public func startAdvertising(name: String, deviceId: String, port: UInt16) {
         #if canImport(Network)
         // pollPermissions retries startDiscovery whenever isAdvertising flips
         // false; without this guard a fresh NWListener stacks on top of the
@@ -69,7 +69,19 @@ public final class DiscoveryService: ObservableObject {
                 tcp.noDelay = true
             }
             let listener = try NWListener(using: params, on: NWEndpoint.Port(rawValue: port) ?? .any)
-            listener.service = NWListener.Service(name: name, type: Self.serviceType)
+            // Publish the stable local device UUID in the Bonjour TXT record
+            // so peers can key the Device by UUID at browse time instead of
+            // by the human-facing Bonjour name — two Macs sharing a name,
+            // or a name that collided into " (2)", used to surface as
+            // multiple rows in the Devices list.
+            var txt = NWTXTRecord()
+            txt["id"] = deviceId
+            listener.service = NWListener.Service(
+                name: name,
+                type: Self.serviceType,
+                domain: nil,
+                txtRecord: txt
+            )
             listener.stateUpdateHandler = { [weak self] state in
                 self?.log.log(.network, "Listener state: \(state)")
             }
@@ -144,15 +156,28 @@ public final class DiscoveryService: ObservableObject {
                 // currently advertises (often a stale "(2)" suffix from a
                 // prior name collision) and pollutes the device list.
                 if iface.kind == .loopback { continue }
+                // Prefer the UUID from the peer's TXT record (Mac 0.1.59+,
+                // and future Windows/Android builds). Peers that haven't
+                // adopted the TXT yet still land under the Bonjour name,
+                // and ConnectionCoordinator's Hello handler merges them
+                // onto the UUID entry on first handshake.
+                let id: String
+                if case let .bonjour(txt) = result.metadata,
+                   let advertisedId = txt["id"],
+                   !advertisedId.isEmpty {
+                    id = advertisedId
+                } else {
+                    id = name
+                }
                 let device = Device(
-                    id: name,
+                    id: id,
                     name: name,
                     iface: iface,
                     lastSeen: Date()
                 )
                 devices.append(device)
-                freshEndpoints[name] = result.endpoint
-                freshTypes[name] = Set(result.interfaces.map { $0.type })
+                freshEndpoints[id] = result.endpoint
+                freshTypes[id] = Set(result.interfaces.map { $0.type })
             }
         }
         self.discoveredDevices = devices
